@@ -14,12 +14,12 @@ server {
 
         client_max_body_size 300M;
 
-       location /askomics/ {
+       location /${ASKOMICS_REL_URL}/ {
                 proxy_pass         http://askomics:6543/;
                 proxy_set_header   Host ${NGINX_HOST};
-        }
-        location /fuseki/ {
-                proxy_pass         http://fuseki:3030/;
+       }
+       location /${TPS_REL_URL}/ {
+                proxy_pass         http://virtuoso:8890/;
                 proxy_set_header   Host ${NGINX_HOST};
-        }
+       }
 }
