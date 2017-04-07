@@ -2,10 +2,10 @@
 # http://localhost/askomics/
 # http://localhost/virtuoso
 
-version: '3'
+version: '2'
 services:
     askomics:
-        image: askomics/askomics
+        image: askomics/docker-askomics
         links:
             - virtuoso
         environment:
